@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "teste-angular-firebase-crud",
+    "angular-firebase-crud": "angular-firebase-crud"
+  }
+}

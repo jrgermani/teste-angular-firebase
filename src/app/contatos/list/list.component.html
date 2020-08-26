@@ -1,0 +1,20 @@
+<div class="card mt-2" *ngFor="let contato of contatos | async">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-2">
+          <img [src]="contato.caminhoImagem || '/assets/images/no-image.jpg'" st
+          yle="width: 100px" class="img-fluid">
+      </div>
+      <div class="col-10">
+        <h5 class="card-title">{{ contato.nome }}</h5>
+        <p class="card-text">{{ contato.telefone }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-default" (click)="edit(contato, contato.key)" >Editar</button>
+    <button type="button" class="btn btn-danger ml-2" (click)="delete(contato.key)" >Excluir</button>
+    <button type="button" class="btn btn-secondary ml-2" (click)="print(contato)" >Imprimir</button>
+  </div>
+</div>
+
